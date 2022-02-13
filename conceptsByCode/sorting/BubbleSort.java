@@ -1,5 +1,6 @@
-package conceptsByCode.ArraySorting;
+package conceptsByCode.sorting;
 
+//O(n2) time complexity, stable sort since we dont swap elements when values are equal.
 public class BubbleSort{
     public static void main(String[] args){
         BubbleSort bubbleSort=new BubbleSort();
