@@ -9,7 +9,7 @@ public class IsUniqueString{
     public static void main(String[] args){
         boolean isUniqueStr =isUnique("abcdefu");
         System.out.println(isUniqueStr);
-        boolean isUniqueStr2 =isUnique("abcdeefu");
+        boolean isUniqueStr2 =isUnique("abcd");
         System.out.println(isUniqueStr2);
     }
 
@@ -35,6 +35,7 @@ public class IsUniqueString{
             if(char_set[val]){
                 return false;
             }
+           char_set[val]=true;
         }
         return true;
     }
