@@ -17,7 +17,7 @@ How would you solve this problem if a temporary buffer is not allowed? */
         head.next.next=new LinkedList(6);
         head.next.next.next=new LinkedList(7);
         head.next.next.next.next=new LinkedList(8);
-        removeDuplicate(head);
+        removeDuplicateWithoutBuffer(head);
         while(head!=null){
             System.out.println(head.data);
             head=head.next;
@@ -39,6 +39,21 @@ How would you solve this problem if a temporary buffer is not allowed? */
             }
             current=current.next;
 
+        }
+    }
+
+    public static void removeDuplicateWithoutBuffer(LinkedList linkedList){
+        LinkedList current=linkedList;
+        while(current!=null){
+            LinkedList nextNode=current;
+            while(nextNode.next!=null){
+                if(nextNode.next.data==current.data){
+                    nextNode.next=nextNode.next.next;
+                }else{
+                    nextNode=nextNode.next;
+                }
+            }
+            current=current.next;
         }
     }
 }
